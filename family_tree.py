@@ -29,9 +29,7 @@ class FamilyTree:
         self.build_family(self.p1)
 
     def build_family(self, person):
-        """
-        Recursively builds the family tree.
-        """
+        """Recursively builds the family tree."""
         # Stops recursion once we reach the year 2120
         if person.year_born >= 2120:
             return
@@ -51,15 +49,11 @@ class FamilyTree:
                 self.build_family(child)
 
     def total_people(self):
-        """
-        Returns total number of people in the family tree.
-        """
+        """Returns total number of people in the family tree."""
         return len(self.people)
 
     def total_by_decade(self):
-        """
-        Returns how many people were born in each decade.
-        """
+        """Returns how many people were born in each decade."""
         counts = {}
 
         for person in self.people:
@@ -75,9 +69,7 @@ class FamilyTree:
         return counts
 
     def duplicate_names(self):
-        """
-        Finds duplicate full names in the tree and returns a list of duplicate names.
-        """
+        """Finds duplicate full names in the tree and returns a list of duplicate names."""
         name_counts = {}
 
         # Counts how many times each name appears
@@ -99,9 +91,7 @@ class FamilyTree:
         return duplicates
 
     def interaction(self):
-        """
-        Simple console menu for user.
-        """
+        """Simple console menu for user."""
         while True:
             print("\nAre you interested in:")
             print("(T)otal number of people in the tree")
